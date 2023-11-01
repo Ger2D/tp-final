@@ -1,0 +1,78 @@
+{%extends "base.html"%} 
+
+{%block h1_header%}
+
+
+<h3 class="text-white-50 mx-auto mt-2 mb-5">Porta memorias</h3>
+
+{%endblock h1_header%}
+
+{%block title_head%}<title>Porta memorias</title>{%endblock title_head%}
+
+
+{%block main%}
+
+<br> <br>
+<h3 class="text-orange-50 mx-auto mt-2 mb-5">-- Hacé tu pedido! -- </h3>
+
+<form action="" method='POST'>
+
+    {% csrf_token %}    
+    {{formulario}}
+    
+    <input type='submit' value='Crear'>
+    
+    
+    </form>
+
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>PRODUCTOS</title>
+        <style>
+            .gallery {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr); 
+                gap: 30px; 
+            }
+            .gallery img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+    
+    
+        <br> <br>
+    <h1>Porta Memorias</h1>
+    
+    <br> <br>
+    
+    <div class="gallery">
+        <figure>
+        <figcaption>Modelo circular</figcaption>
+        <img src="https://imagefullhost.com/images/2023/10/31/PhotoRoom-20230802_153731.png" alt="Imagen 1">
+    </figure>
+    <figure>
+        <figcaption>Modelo tarjetero</figcaption>
+        <img src="https://imagefullhost.com/images/2023/10/31/PhotoRoom-20230802_212624.png" alt="Imagen 2">
+    </figure>
+    <figure>
+        <figcaption>Modelo box</figcaption>
+        <img src="https://imagefullhost.com/images/2023/10/31/PhotoRoom-20230930_103237.png" alt="Imagen 3">
+    </figure>
+               
+    </div>
+ 
+        
+        
+        
+   
+    
+    </body>
+    </html>
+
+{%endblock main%} 
