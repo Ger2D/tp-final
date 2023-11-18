@@ -1,0 +1,26 @@
+{%extends "base.html"%} 
+
+{%block h1_header%}
+
+
+<h3 class="text-white-50 mx-auto mt-2 mb-5">Carga tu pedido de porta memorias</h3>
+
+{%endblock h1_header%}
+
+{%block title_head%}<title>Pedido de porta memorias</title>{%endblock title_head%}
+
+
+{%block main%}
+
+
+<form action="" method='POST'>
+
+    {% csrf_token %}    
+    {{formulario}}
+    
+    <input type='submit' value='Crear'>
+    
+    
+    </form>
+
+{%endblock main%} 

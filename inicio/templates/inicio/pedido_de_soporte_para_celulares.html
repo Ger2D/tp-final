@@ -1,0 +1,39 @@
+{%extends "base.html"%} 
+
+{%block h1_header%}
+
+
+<h3 class="text-white-50 mx-auto mt-2 mb-5">Carga tu pedido de soporte para celulares</h3>
+
+
+{%endblock h1_header%}
+
+{%block title_head%}<title>Pedido de soporte para celulares</title>{%endblock title_head%}
+
+
+{%block main%}
+
+
+
+<form action="" method='POST'>
+
+    {% csrf_token %}    
+    {{formulario}}
+    
+    <input type='submit' value='Crear'>
+    
+    
+</form>
+
+
+{% comment %} <ul>
+    {% for pedido_de_soporte_para_celulares in listado_de_pedidos_soportes %}
+    
+    <li>{{pedido_de_soporte_para_celulares}}</li>
+    {% endfor %}
+    
+    </ul>
+{{listado_de_pedidos_soportes}} {% endcomment %}
+
+    
+{%endblock main%} 
