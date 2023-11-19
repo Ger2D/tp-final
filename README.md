@@ -40,3 +40,6 @@
 
 # ---------------------------------------
 # Profes, habia subido a tiempo el trabajo pero luego me di cuenta que se me habia roto todo el código, tanto # de la versión de github como la de mi pc, ahora lo acomode todo mas o menos como estaba, y lo vuelvo a #subir tuve que cambiar de rama, se llama gernuevo donde esta el proyecto funcionando correctamente
+
+dejo el link al vídeo de YouTube 
+https://youtu.be/mHoYRA5qqlo?si=43Qf5rmnpzb0Rkn4
