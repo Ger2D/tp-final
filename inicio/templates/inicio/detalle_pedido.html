@@ -1,3 +1,7 @@
+
+
+
+
 {% extends "base.html" %}
 
 {% block h1_header %}
@@ -15,22 +19,16 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <h3 class="text-orange-50 mb-3">Detalle</h3>
-                        
-
                         <img src="https://imagefullhost.com/images/2023/11/18/detalle.png" alt="Detalle" height="50px">
-                    </div>
-                    
-
-                    <div class="card-body text-justify">
                         <ul>
-                            <li>Modelo: {{detalles.modelo }}</li>
-                            <li>Descripción: {{detalles.descripcion | safe }}</li>
-                            <li>Cantidad: {{detalles.cantidad }}</li>
-                            <li>Color: {{detalles.color }}</li>
-                            <li>Fecha del pedido: {{detalles.fecha }}</li>
+                            
+                            <li>Modelo: {{ detalles.modelo }}</li>
+                            <li>Descripción: {{ detalles.descripcion | safe}}</li>
+                            <li>Cantidad: {{ detalles.cantidad }}</li>
+                            <li>Color: {{ detalles.color }}</li>
+                            <li>Fecha: {{ detalles.fecha }}</li>
                         </ul>
                         <a class="btn btn-primary" href="{% url 'carrito' %}">VOLVER</a>
-                        
                     </div>
                 </div>
             </div>

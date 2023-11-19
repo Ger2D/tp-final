@@ -1,3 +1,6 @@
+
+
+
 {% extends "base.html" %}
 
 {% block h1_header %}
@@ -16,18 +19,10 @@
                     <div class="card-body text-center">
                         <h3 class="text-orange-50 mb-3">Actualizar Pedido</h3>
                         <img src="https://imagefullhost.com/images/2023/11/18/edit_modify_icon-icons.com_72390.png" alt="Actualizar" height="50px">
-
                         <form action="" method="POST">
                             {% csrf_token %}
-
-
-
-                            <table>
-                                {{formulario.media}}
-                                {{ formulario }}
-
-                            </table>
-                            
+                            {{ formulario.media }}
+                            {{ formulario }}
                             <input type="submit" class="btn btn-primary" value="Actualizar">
                         </form>
                         

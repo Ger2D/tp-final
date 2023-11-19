@@ -8,7 +8,6 @@
     <title>Tu Carrito</title>
 {% endblock title_head %}
 
-<<<<<<< HEAD
 {% block main %}
     <div class="container mt-5">
         <div class="row justify-content-center">
@@ -39,9 +38,9 @@
                                         <tr>
                                             <td>{{ carrito }}</td>
                                             <td>
-                                                <a href="{% url 'actualizar_pedido' carrito.id %}" class="btn btn-info btn-xs mr-1">Editar</a>
-                                                <a href="{% url 'eliminar_pedido' carrito.id %}" class="btn btn-danger btn-xs mr-1">Eliminar</a>
-                                                <a href="{% url 'detalle_pedido' carrito.id %}" class="btn btn-secondary btn-xs">Detalle</a>
+                                                <a href="{% url 'actualizar_pedido' carrito.id %}" class="btn btn-info btn-sm mr-1">Editar</a>
+                                                <a href="{% url 'eliminar_pedido' carrito.id %}" class="btn btn-danger btn-sm mr-1">Eliminar</a>
+                                                <a href="{% url 'detalle_pedido' carrito.id %}" class="btn btn-secondary btn-sm">Detalle</a>
                                             </td>
                                         </tr>
                                     {% endfor %}
@@ -57,58 +56,3 @@
         </div>
     </div>
 {% endblock main %}
-=======
-
-<h3 class="text-white-50 mx-auto mt-2 mb-5">Tu carrito </h3>
-
-{%endblock h1_header%}
-
-<<<<<<< HEAD
-{%block title_head%}<title>Tu carrito</title>{%endblock title_head%}
-
-
-{%block main%}
-
-=======
-
-{%block title_head%}<title>Tu carrito</title>{%endblock title_head%}
-
-<br> <br>
-
-{%block main%}
-
-
-<br> <br>
-<h3 class="text-orange-50 mx-auto mt-2 mb-5">-- Este es tu carrito! -- </h3>
-
->>>>>>> 1cbed0cd986d84e4d55170048acd85f3add4d82e
-<form action=''> 
- 
-    <input type="text" name='modelo', placeholder='Ingresa el modelo a buscar...'>
-    <input type="submit" value='Buscar'>
-</form>
-
-<<<<<<< HEAD
-=======
-<br> <br>
->>>>>>> 1cbed0cd986d84e4d55170048acd85f3add4d82e
-
-{% if listado_en_carrito %}
- 
-<ul>
-{% for carrito in listado_en_carrito %}
-
-<li>{{carrito}}</li>
-{% endfor %}
-
-</ul>
-
-{% else %}
-<p>No se encontraron coincidencias</p>
-
-
-{% endif %}
-
-{% comment %} {{listado_de_llaveros}} {% endcomment %}
-{%endblock main%}
->>>>>>> eb6945b16b3580dbd5ca90e60ee5bd82b261f89e

@@ -18,16 +18,13 @@ from django.contrib.auth.models import AnonymousUser
 def inicio(request):   
     return render(request, 'inicio/inicio.html',{})
 
-<<<<<<< HEAD
+
 def about(request):   
     return render(request, 'inicio/about.html',{})
-=======
-<<<<<<< HEAD
+
 def productos(request):   
     return render(request, 'inicio/productos.html',{})
-=======
->>>>>>> 1cbed0cd986d84e4d55170048acd85f3add4d82e
->>>>>>> eb6945b16b3580dbd5ca90e60ee5bd82b261f89e
+
 
 
 
@@ -71,7 +68,7 @@ def pedido_de_llaveros(request):
             infor_limpia = formulario.cleaned_data
             
             modelo = infor_limpia.get('modelo')
-<<<<<<< HEAD
+
             descripcion = infor_limpia.get('descripcion')
             color = infor_limpia.get('color')
             cantidad = infor_limpia.get('cantidad')
@@ -79,21 +76,11 @@ def pedido_de_llaveros(request):
             
 
             llavero = Llaveros(modelo=modelo, descripcion=descripcion, color=color, cantidad=cantidad, usuario=request.user)
-=======
-<<<<<<< HEAD
+
             descripcion = infor_limpia.get('descripcion')
             color = infor_limpia.get('color')
             cantidad = infor_limpia.get('cantidad')
             
-            llavero = Llaveros(modelo=modelo, descripcion=descripcion, color=color, cantidad=cantidad)
-=======
-            descripción = infor_limpia.get('descripción')
-            color = infor_limpia.get('color')
-            cantidad = infor_limpia.get('cantidad')
-            
-            llavero = Llaveros(modelo=modelo, descripción=descripción, color=color, cantidad=cantidad)
->>>>>>> 1cbed0cd986d84e4d55170048acd85f3add4d82e
->>>>>>> eb6945b16b3580dbd5ca90e60ee5bd82b261f89e
             llavero.save()
 
             return redirect('carrito')
@@ -129,27 +116,13 @@ def pedido_de_porta_memorias (request):
             infor_limpia = formulario.cleaned_data
             
             modelo = infor_limpia.get('modelo')
-<<<<<<< HEAD
+
             descripcion = infor_limpia.get('descripcion')
             color = infor_limpia.get('color')
             cantidad = infor_limpia.get('cantidad')
             
             porta_memorias = PortaMemorias(modelo=modelo, descripcion=descripcion, color=color, cantidad=cantidad, usuario=request.user)
-=======
-<<<<<<< HEAD
-            descripcion = infor_limpia.get('descripcion')
-            color = infor_limpia.get('color')
-            cantidad = infor_limpia.get('cantidad')
-            
-            porta_memorias = PortaMemorias(modelo=modelo, descripcion=descripcion, color=color, cantidad=cantidad)
-=======
-            descripción = infor_limpia.get('descripción')
-            color = infor_limpia.get('color')
-            cantidad = infor_limpia.get('cantidad')
-            
-            porta_memorias = PortaMemorias(modelo=modelo, descripción=descripción, color=color, cantidad=cantidad)
->>>>>>> 1cbed0cd986d84e4d55170048acd85f3add4d82e
->>>>>>> eb6945b16b3580dbd5ca90e60ee5bd82b261f89e
+
             porta_memorias.save()
             
             return redirect('carrito')
@@ -179,30 +152,15 @@ def pedido_de_soporte_para_celulares (request):
             infor_limpia = formulario.cleaned_data
             
             modelo = infor_limpia.get('modelo')
-<<<<<<< HEAD
+
             descripcion = infor_limpia.get('descripcion')
             color = infor_limpia.get('color')
             cantidad = infor_limpia.get('cantidad')
             
             soporte_para_celulares = SoporteCelulares(modelo=modelo, descripcion=descripcion, color=color, cantidad=cantidad, usuario=request.user)
             soporte_para_celulares.save()
-=======
-<<<<<<< HEAD
-            descripcion = infor_limpia.get('descripcion')
-            color = infor_limpia.get('color')
-            cantidad = infor_limpia.get('cantidad')
-            
-            llavero = SoporteCelulares(modelo=modelo, descripcion=descripcion, color=color, cantidad=cantidad)
-=======
-            descripción = infor_limpia.get('descripción')
-            color = infor_limpia.get('color')
-            cantidad = infor_limpia.get('cantidad')
-            
-            llavero = SoporteCelulares(modelo=modelo, descripción=descripción, color=color, cantidad=cantidad)
->>>>>>> 1cbed0cd986d84e4d55170048acd85f3add4d82e
-            llavero.save()
->>>>>>> eb6945b16b3580dbd5ca90e60ee5bd82b261f89e
-            
+
+                     
             return redirect('carrito')
         else: 
             return render(request, 'inicio/pedido_de_soporte_para_celulares.html', {'formulario': formulario})
