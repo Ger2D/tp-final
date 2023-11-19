@@ -16,6 +16,7 @@
                     <div class="card-body text-center">
 
 
+<<<<<<< HEAD
                         <h1 class="text-black-30">Soporte Celulares</h1>
                         
                         <br><br>
@@ -57,3 +58,98 @@
         </div>
     </div>
 {% endblock main %}
+=======
+<<<<<<< HEAD
+<h3 class="text-white-50 mx-auto mt-2 mb-5">Carga tu pedido de soporte para celulares</h3>
+=======
+<h3 class="text-white-50 mx-auto mt-2 mb-5">Soporte para celulares</h3>
+>>>>>>> 1cbed0cd986d84e4d55170048acd85f3add4d82e
+
+
+{%endblock h1_header%}
+
+<<<<<<< HEAD
+{%block title_head%}<title>Pedido de soporte para celulares</title>{%endblock title_head%}
+=======
+{%block title_head%}<title>Soporte para celulares</title>{%endblock title_head%}
+>>>>>>> 1cbed0cd986d84e4d55170048acd85f3add4d82e
+
+
+{%block main%}
+
+<<<<<<< HEAD
+
+=======
+<br> <br>
+<h3 class="text-red-50 mx-auto mt-2 mb-5">-- Hacé tu pedido! -- </h3>
+>>>>>>> 1cbed0cd986d84e4d55170048acd85f3add4d82e
+
+<form action="" method='POST'>
+
+    {% csrf_token %}    
+    {{formulario}}
+    
+    <input type='submit' value='Crear'>
+    
+    
+</form>
+
+
+<<<<<<< HEAD
+{% comment %} <ul>
+    {% for pedido_de_soporte_para_celulares in listado_de_pedidos_soportes %}
+    
+    <li>{{pedido_de_soporte_para_celulares}}</li>
+    {% endfor %}
+    
+    </ul>
+{{listado_de_pedidos_soportes}} {% endcomment %}
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PRODUCTOS</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 30px; 
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <br> <br>
+  
+<h1>Soporte Celulares</h1>
+<br> <br>
+
+<div class="gallery">
+	<figure>
+	<figcaption>Modelo plegable robusto</figcaption>
+    <img src="https://imagefullhost.com/images/2023/10/31/IMG_20211123_171835_109.jpeg" alt="Imagen 1">
+</figure>
+<figure>
+	<figcaption>Modelo Animales</figcaption>
+    <img src="https://imagefullhost.com/images/2023/10/31/IMG_20211123_174240_006.jpeg" alt="Imagen 2">
+</figure>
+<figure>
+	<figcaption>Modelo plagable plano</figcaption>
+    <img src="https://imagefullhost.com/images/2023/10/31/20221219_200946_0000.png" alt="Imagen 3">
+</figure>
+
+	
+	
+    
+</div>
+
+</body>
+</html>
+>>>>>>> 1cbed0cd986d84e4d55170048acd85f3add4d82e
+
+    
+{%endblock main%} 
+>>>>>>> eb6945b16b3580dbd5ca90e60ee5bd82b261f89e
