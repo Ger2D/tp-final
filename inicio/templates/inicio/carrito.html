@@ -1,47 +1,58 @@
-{%extends "base.html"%} 
+{% extends "base.html" %}
 
-{%block h1_header%}
+{% block h1_header %}
+    <h3 class="text-white-50 mx-auto mt-2 mb-5">Tu Carrito</h3>
+{% endblock h1_header %}
 
+{% block title_head %}
+    <title>Tu Carrito</title>
+{% endblock title_head %}
 
-
-<h3 class="text-white-50 mx-auto mt-2 mb-5">Tu carrito </h3>
-
-{%endblock h1_header%}
-
-
-{%block title_head%}<title>Tu carrito</title>{%endblock title_head%}
-
-<br> <br>
-
-{%block main%}
-
-
-<br> <br>
-<h3 class="text-orange-50 mx-auto mt-2 mb-5">-- Este es tu carrito! -- </h3>
-
-<form action=''> 
- 
-    <input type="text" name='modelo', placeholder='Ingresa el modelo a buscar...'>
-    <input type="submit" value='Buscar'>
-</form>
-
-<br> <br>
-
-{% if listado_en_carrito %}
- 
-<ul>
-{% for carrito in listado_en_carrito %}
-
-<li>{{carrito}}</li>
-{% endfor %}
-
-</ul>
-
-{% else %}
-<p>No se encontraron coincidencias</p>
-
-
-{% endif %}
-
-{% comment %} {{listado_de_llaveros}} {% endcomment %}
-{%endblock main%}
+{% block main %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="text-orange-50 mb-3">Este es tu Carrito</h3>
+                        
+                        <img src="https://imagefullhost.com/images/2023/11/17/carrito-de-compras.png" alt="Carrito de Compras" height="50px">
+                        
+                        <form action="" method="GET">
+                            <input type="text" name="modelo" placeholder="Ingresa el modelo a buscar...">
+                            <input type="submit" class="btn btn-primary" value="Buscar">
+                        </form>
+                        
+                        <br><br>
+                        
+                        {% if listado_en_carrito %}
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for carrito in listado_en_carrito %}
+                                        <tr>
+                                            <td>{{ carrito }}</td>
+                                            <td>
+                                                <a href="{% url 'actualizar_pedido' carrito.id %}" class="btn btn-info btn-xs mr-1">Editar</a>
+                                                <a href="{% url 'eliminar_pedido' carrito.id %}" class="btn btn-danger btn-xs mr-1">Eliminar</a>
+                                                <a href="{% url 'detalle_pedido' carrito.id %}" class="btn btn-secondary btn-xs">Detalle</a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        {% else %}
+                            <p>No se encontraron coincidencias</p>
+                        {% endif %}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}

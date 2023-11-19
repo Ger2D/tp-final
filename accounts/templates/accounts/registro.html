@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block h1_header %}
+    <h3 class="text-white-50 mx-auto mt-2 mb-5">Regístrate</h3>
+{% endblock h1_header %}
+
+{% block title_head %}
+    <title>Regístrate</title>
+{% endblock title_head %}
+
+{% block main %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="text-orange-50 mb-3">Regístrate</h3>
+                        
+                        <form action="{% url 'registro' %}" method="POST">
+                            {% csrf_token %}
+                            <table class="table">
+                                {{ formulario_de_registro }}
+                            </table>
+                            <input type="submit" class="btn btn-primary" value="Regístrate">
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}
+ 

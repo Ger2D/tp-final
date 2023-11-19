@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block h1_header %}
+    {{ user.username }}'s Profile
+    <h3 class="text-white-50 mx-auto mt-2 mb-5">Perfil</h3>
+{% endblock h1_header %}
+
+{% block title_head %}
+    <title>{{ user.username }}'s Profile</title>
+{% endblock title_head %}
+
+{% block main %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="text-orange-50 mb-3">PERFIL DE {{ request.user.username | upper }}</h3>
+                        <a class="navbar-brand" href="{% url 'editar_perfil' %}">EDITAR PERFIL</a>
+                        {% if detalles.avatar %}
+                            <img src="{{ detalles.avatar.url }}" alt="Avatar de {{ request.user.username }}" class="img-fluid rounded-circle mb-3" style="max-height: 150px;">
+                        {% else %}
+                            <p class="text-muted">No hay avatar disponible.</p>
+                        {% endif %}
+
+                        <ul class="list-group list-group-flush text-start">
+                            <li class="list-group-item"><strong>Nombre:</strong> {{ detalles.nombre }}</li>
+                            <li class="list-group-item"><strong>Apellido:</strong> {{ detalles.apellido }}</li>
+                            <li class="list-group-item"><strong>Email:</strong> {{ detalles.email }}</li>
+                            <li class="list-group-item"><strong>Telefono:</strong> {{ detalles.telefono }}</li>
+                            <li class="list-group-item"><strong>Biografía:</strong> {{ detalles.biografia }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}
+
+
+
+

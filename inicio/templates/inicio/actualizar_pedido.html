@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block h1_header %}
+    <h3 class="text-white-50 mx-auto mt-2 mb-5">Actualizar Pedido</h3>
+{% endblock h1_header %}
+
+{% block title_head %}
+    <title>Actualizar Pedido</title>
+{% endblock title_head %}
+
+{% block main %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="text-orange-50 mb-3">Actualizar Pedido</h3>
+                        <img src="https://imagefullhost.com/images/2023/11/18/edit_modify_icon-icons.com_72390.png" alt="Actualizar" height="50px">
+
+                        <form action="" method="POST">
+                            {% csrf_token %}
+
+
+
+                            <table>
+                                {{formulario.media}}
+                                {{ formulario }}
+
+                            </table>
+                            
+                            <input type="submit" class="btn btn-primary" value="Actualizar">
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}

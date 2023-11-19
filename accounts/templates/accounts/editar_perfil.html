@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block h1_header %}
+    <h3 class="text-white-50 mx-auto mt-2 mb-5">Editar Perfil</h3>
+{% endblock h1_header %}
+
+{% block title_head %}
+    <title>Editar Perfil</title>
+{% endblock title_head %}
+
+{% block main %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 class="text-orange-50 mb-3">Editar Perfil</h3>
+                        
+                        <form action="{% url 'editar_perfil' %}" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <table class="table">
+                                {{ formulario }}
+                            </table>
+                            <input type="submit" class="btn btn-primary" value="Editar Perfil">
+                        </form>
+                        
+                        <a href="{% url 'cambiar_password' %}" class="btn btn-link">Cambiar Contraseña</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock main %}
+
+

@@ -1,5 +1,7 @@
 from django.contrib import admin
-# from inicio.models import Pedido
-# Register your models here.
+from .models import Llaveros, SoporteCelulares, PortaMemorias
 
-# admin.site.register(Pedido)
+
+admin.site.register(Llaveros)
+admin.site.register(SoporteCelulares)
+admin.site.register(PortaMemorias)
