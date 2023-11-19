@@ -37,3 +37,6 @@
 # ActualizarSoporteCelularesFormulario
 
 # En la aplicación accounts se usa el formulario (MiFormularioDeCreacion) para crear los usuarios y el formulario (MiFormularioDeEdicionDePerfil), para modificar los datos del user.
+
+# ---------------------------------------
+# Profes, habia subido a tiempo el trabajo pero luego me di cuenta que se me habia roto todo el código, tanto # de la versión de github como la de mi pc, ahora lo acomode todo mas o menos como estaba, y lo vuelvo a #subir. 
